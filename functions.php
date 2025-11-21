@@ -5,11 +5,14 @@
 
 // Enqueue Tailwind CSS for Frontend
 function customblocktheme_enqueue_styles() {
+    $css_file = get_theme_file_path('build/index.css');
+    $version = file_exists($css_file) ? filemtime($css_file) : '1.0.0';
+
     wp_enqueue_style(
         'customblocktheme-tailwind',
         get_theme_file_uri('build/index.css'),
         array(),
-        filemtime(get_theme_file_path('build/index.css'))
+        $version
     );
 }
 add_action('wp_enqueue_scripts', 'customblocktheme_enqueue_styles');
