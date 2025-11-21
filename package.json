@@ -1,0 +1,23 @@
+{
+  "name": "custom-block-theme",
+  "version": "1.0.0",
+  "description": "WordPress Block Theme with Tailwind CSS",
+  "scripts": {
+    "preview": "npm-run-all --parallel sync wpstart tailwindwatch",
+    "sync": "browser-sync start -p 'yoursite.local' --files '**/*.php' '**/*.html' 'build/*.js' 'build/*.css'",
+    "buildwp": "wp-scripts build",
+    "build": "npm-run-all --sequential buildwp tailwindbuild",
+    "wpstart": "wp-scripts start",
+    "start": "npm-run-all --parallel wpstart tailwindwatch",
+    "tailwindbuild": "tailwindcss -i ./src/index.css -o ./build/index.css --minify",
+    "tailwindwatch": "tailwindcss -i ./src/index.css -o ./build/index.css --watch --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.14",
+    "@tailwindcss/typography": "^0.5.19",
+    "@wordpress/scripts": "^30.26.0",
+    "browser-sync": "^3.0.4",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^4.1.14"
+  }
+}

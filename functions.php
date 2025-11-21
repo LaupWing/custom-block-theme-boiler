@@ -1,0 +1,64 @@
+<?php
+/**
+ * Theme Functions
+ */
+
+// Enqueue Tailwind CSS for Frontend
+function customblocktheme_enqueue_styles() {
+    wp_enqueue_style(
+        'customblocktheme-tailwind',
+        get_theme_file_uri('build/index.css'),
+        array(),
+        filemtime(get_theme_file_path('build/index.css'))
+    );
+}
+add_action('wp_enqueue_scripts', 'customblocktheme_enqueue_styles');
+
+// Enqueue Tailwind CSS for Block Editor (Site Editor)
+function customblocktheme_enqueue_editor_styles() {
+    wp_enqueue_style(
+        'customblocktheme-tailwind-editor',
+        get_theme_file_uri('build/index.css'),
+        array(),
+        filemtime(get_theme_file_path('build/index.css'))
+    );
+}
+add_action('enqueue_block_editor_assets', 'customblocktheme_enqueue_editor_styles');
+
+// Enqueue Google Fonts (Frontend + Editor)
+function customblocktheme_enqueue_fonts() {
+    wp_enqueue_style(
+        'customblocktheme-google-fonts',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap',
+        array(),
+        null
+    );
+}
+add_action('wp_enqueue_scripts', 'customblocktheme_enqueue_fonts');
+add_action('enqueue_block_editor_assets', 'customblocktheme_enqueue_fonts');
+
+// Theme Setup
+function customblocktheme_theme_setup() {
+    // Add support for editor styles
+    add_theme_support('editor-styles');
+
+    // Add editor stylesheet
+    add_editor_style(array(
+        'build/index.css',
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
+    ));
+
+    // Add support for custom logo
+    add_theme_support('custom-logo', array(
+        'height'      => 96,
+        'width'       => 150,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ));
+
+    // Register navigation menus
+    register_nav_menus(array(
+        'primary' => __('Primary Menu', 'custom-block-theme'),
+    ));
+}
+add_action('after_setup_theme', 'customblocktheme_theme_setup');
