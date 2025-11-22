@@ -73,6 +73,18 @@
    HEADER COMPONENTS
    ========================================================================== */
 
+/* Site Title Styling */
+.wp-block-site-title {
+  margin: 0 !important;
+  font-size: 1.5rem !important;
+  line-height: 1 !important;
+}
+
+.wp-block-site-title a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
 /* WordPress Navigation Block Styling */
 .wp-block-navigation {
   gap: 1.5rem !important;
@@ -90,6 +102,11 @@
 
 .wp-block-navigation .wp-block-navigation__submenu-container {
   display: none;
+}
+
+/* Contact Button Styling */
+.wp-block-button a {
+  text-decoration: none !important;
 }
 
 /* Mobile Menu Links */
