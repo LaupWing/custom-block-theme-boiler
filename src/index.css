@@ -47,7 +47,7 @@
 
 /* CTA Button */
 .btn-cta {
-  @apply rounded-full bg-[#a3e635] px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-transform hover:scale-105;
+  @apply inline-block rounded-full bg-[#a3e635] px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-transform hover:scale-105 no-underline;
 }
 
 /* Mobile Menu Toggle */
@@ -62,18 +62,4 @@
 
 .mobile-nav-link:last-child {
   @apply border-b-0;
-}
-
-/* WordPress Navigation Block Styling */
-.wp-block-navigation .wp-block-navigation-item__content {
-  @apply text-sm font-bold text-slate-600 transition-colors hover:text-indigo-700;
-}
-
-.wp-block-navigation__responsive-container-open {
-  @apply hidden md:flex gap-6;
-}
-
-/* Button CTA Wrapper Fix */
-.btn-cta .wp-block-button__link {
-  @apply rounded-full bg-[#a3e635] px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-transform hover:scale-105;
 }
