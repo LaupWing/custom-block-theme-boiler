@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Title: Header
  * Slug: custom-block-theme/header
@@ -22,8 +21,8 @@
         <!-- /wp:group -->
 
         <!-- Desktop Navigation Right -->
-        <!-- wp:group {"className":"hidden md:flex items-center gap-8","layout":{"type":"flex"}} -->
-        <div class="wp-block-group hidden md:flex items-center gap-8">
+        <!-- wp:group {"className":"flex items-center gap-8","layout":{"type":"flex"}} -->
+        <div class="wp-block-group flex items-center gap-8">
 
             <!-- Static Navigation Links -->
             <!-- wp:group {"className":"flex gap-6","layout":{"type":"flex"}} -->
@@ -31,7 +30,7 @@
                 <!-- wp:paragraph {"className":"nav-link m-0"} -->
                 <p class="nav-link m-0"><a href="/">HOME</a></p>
                 <!-- /wp:paragraph -->
-                test
+
                 <!-- wp:paragraph {"className":"nav-link m-0"} -->
                 <p class="nav-link m-0"><a href="/services">SERVICES</a></p>
                 <!-- /wp:paragraph -->
@@ -60,53 +59,6 @@
         </div>
         <!-- /wp:group -->
 
-        <!-- Mobile Menu Button -->
-        <!-- wp:html -->
-        <label for="mobile-menu-toggle" class="mobile-menu-btn md:hidden">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </label>
-        <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
-        <!-- /wp:html -->
-
-    </div>
-    <!-- /wp:group -->
-
-    <!-- Mobile Menu Dropdown -->
-    <!-- wp:group {"className":"absolute left-0 right-0 top-full mt-4 hidden peer-checked:flex flex-col overflow-hidden rounded-xl bg-white shadow-xl md:hidden"} -->
-    <div class="wp-block-group absolute left-0 right-0 top-full mt-4 hidden peer-checked:flex flex-col overflow-hidden rounded-xl bg-white shadow-xl md:hidden">
-        <!-- wp:group {"className":"flex flex-col p-4","layout":{"type":"flex","orientation":"vertical"}} -->
-        <nav class="wp-block-group flex flex-col p-4">
-
-            <!-- wp:paragraph {"className":"mobile-nav-link"} -->
-            <p class="mobile-nav-link"><a href="/">HOME</a></p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:paragraph {"className":"mobile-nav-link"} -->
-            <p class="mobile-nav-link"><a href="/services">SERVICES</a></p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:paragraph {"className":"mobile-nav-link"} -->
-            <p class="mobile-nav-link"><a href="/doctors">DOCTORS</a></p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:paragraph {"className":"mobile-nav-link"} -->
-            <p class="mobile-nav-link"><a href="/blog">BLOG</a></p>
-            <!-- /wp:paragraph -->
-
-            <!-- wp:buttons -->
-            <div class="wp-block-buttons mt-2">
-                <!-- wp:button {"className":"btn-cta w-full"} -->
-                <div class="wp-block-button btn-cta w-full">
-                    <a class="wp-block-button__link wp-element-button" href="/contact">Contact Us</a>
-                </div>
-                <!-- /wp:button -->
-            </div>
-            <!-- /wp:buttons -->
-
-        </nav>
-        <!-- /wp:group -->
     </div>
     <!-- /wp:group -->
 
