@@ -6,24 +6,30 @@
  * Block Types: core/template-part/header
  */
 ?>
-<!-- wp:group {"tagName":"header","className":"sticky top-0 z-50 bg-white shadow-sm"} -->
-<header class="wp-block-group sticky top-0 z-50 bg-white shadow-sm">
+<!-- wp:group {"tagName":"header","className":"absolute left-0 right-0 top-8 z-50 px-4"} -->
+<header class="wp-block-group absolute left-0 right-0 top-8 z-50 px-4">
 
-    <!-- wp:group {"className":"container mx-auto px-[5%] py-4","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
-    <div class="wp-block-group container mx-auto px-[5%] py-4">
+    <!-- wp:group {"className":"header-floating","layout":{"type":"flex","justifyContent":"space-between"}} -->
+    <div class="wp-block-group header-floating">
 
-        <!-- wp:site-logo {"width":150} /-->
+        <!-- wp:group {"className":"flex items-center gap-2","layout":{"type":"flex"}} -->
+        <div class="wp-block-group flex items-center gap-2">
+            <!-- wp:site-logo {"width":32,"className":"logo-icon"} /-->
+            <!-- wp:site-title {"className":"logo-text"} /-->
+        </div>
+        <!-- /wp:group -->
 
-        <!-- wp:group {"className":"flex items-center gap-8","layout":{"type":"flex"}} -->
-        <div class="wp-block-group flex items-center gap-8">
+        <!-- Desktop Navigation - Using wp:navigation block (WordPress injects menu here) -->
+        <!-- wp:group {"className":"hidden md:flex items-center gap-8","layout":{"type":"flex"}} -->
+        <div class="wp-block-group hidden md:flex items-center gap-8">
 
-            <!-- wp:navigation {"overlayMenu":"mobile","layout":{"type":"flex","justifyContent":"right"}} /-->
+            <!-- wp:navigation {"ref":1,"overlayMenu":"never","className":"nav-link","layout":{"type":"flex","justifyContent":"right"}} /-->
 
             <!-- wp:buttons -->
             <div class="wp-block-buttons">
-                <!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"rounded-full"} -->
-                <div class="wp-block-button rounded-full">
-                    <a class="wp-block-button__link has-base-color has-primary-background-color wp-element-button" href="/contact">Get Started</a>
+                <!-- wp:button {"className":"btn-cta"} -->
+                <div class="wp-block-button btn-cta">
+                    <a class="wp-block-button__link wp-element-button" href="/contact">Contact Us</a>
                 </div>
                 <!-- /wp:button -->
             </div>
