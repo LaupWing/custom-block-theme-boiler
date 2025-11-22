@@ -6,59 +6,54 @@
  * Block Types: core/template-part/header
  */
 ?>
-<!-- wp:group {"tagName":"header","className":"absolute left-0 right-0 top-8 z-50 px-4","layout":{"type":"default"}} -->
-<header class="wp-block-group absolute left-0 right-0 top-8 z-50 px-4">
+<!-- wp:html -->
+<header class="absolute left-0 right-0 top-8 z-50 px-4">
+    <div class="mx-auto flex max-w-7xl items-center justify-between rounded-full bg-white px-6 py-3 shadow-lg">
 
-    <!-- wp:group {"className":"mx-auto flex max-w-7xl items-center justify-between rounded-full bg-white px-6 py-3 shadow-lg","layout":{"type":"flex","justifyContent":"space-between"}} -->
-    <div class="wp-block-group mx-auto flex max-w-7xl items-center justify-between rounded-full bg-white px-6 py-3 shadow-lg">
-
-        <!-- Logo Section -->
-        <!-- wp:group {"className":"flex items-center gap-2","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-        <div class="wp-block-group flex items-center gap-2">
-
-            <!-- Logo Icon -->
-            <!-- wp:group {"className":"flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-white","layout":{"type":"default"}} -->
-            <div class="wp-block-group flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-white">
-                <!-- wp:html -->
+        <!-- Logo Left -->
+        <a href="/" class="flex items-center gap-2">
+            <div class="flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-white">
                 <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <!-- /wp:html -->
             </div>
-            <!-- /wp:group -->
+            <div class="text-2xl font-black tracking-tighter text-indigo-700">SMILEO</div>
+        </a>
 
-            <!-- Site Title -->
-            <!-- wp:site-title {"level":0,"className":"text-2xl font-black tracking-tighter text-indigo-700 m-0"} /-->
+        <!-- Mobile Menu Toggle Checkbox -->
+        <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
 
+        <!-- Desktop Navigation Right -->
+        <div class="hidden items-center gap-8 md:flex">
+            <nav class="flex gap-6 text-sm font-bold text-slate-600">
+                <a href="/" class="transition-colors hover:text-indigo-700">HOME</a>
+                <a href="/services" class="transition-colors hover:text-indigo-700">SERVICES</a>
+                <a href="/doctors" class="transition-colors hover:text-indigo-700">DOCTORS</a>
+                <a href="/blog" class="transition-colors hover:text-indigo-700">BLOG</a>
+            </nav>
+            <a href="/contact" class="rounded-full bg-[#a3e635] px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-transform hover:scale-105">
+                Contact Us
+            </a>
         </div>
-        <!-- /wp:group -->
 
-        <!-- Desktop Navigation -->
-        <!-- wp:group {"className":"hidden md:flex items-center gap-8","layout":{"type":"flex"}} -->
-        <div class="wp-block-group hidden md:flex items-center gap-8">
+        <!-- Mobile Menu Button Right -->
+        <label for="mobile-menu-toggle" class="flex cursor-pointer items-center rounded p-1 text-slate-900 hover:bg-slate-100 md:hidden">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </label>
 
-            <!-- Navigation Menu -->
-            <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"left"}} /-->
-
-            <!-- CTA Button -->
-            <!-- wp:buttons -->
-            <div class="wp-block-buttons">
-                <!-- wp:button {"className":"is-style-fill"} -->
-                <div class="wp-block-button is-style-fill">
-                    <a class="wp-block-button__link rounded-full bg-[#a3e635] px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-transform hover:scale-105 wp-element-button" href="/contact">Contact Us</a>
-                </div>
-                <!-- /wp:button -->
-            </div>
-            <!-- /wp:buttons -->
-
+        <!-- Mobile Menu Dropdown -->
+        <div class="absolute left-0 right-0 top-full mt-4 hidden flex-col overflow-hidden rounded-xl bg-white shadow-xl peer-checked:flex md:hidden">
+            <nav class="flex flex-col p-4">
+                <a href="/" class="border-b border-slate-100 py-3 text-center font-bold text-slate-700 hover:text-indigo-700">HOME</a>
+                <a href="/services" class="border-b border-slate-100 py-3 text-center font-bold text-slate-700 hover:text-indigo-700">SERVICES</a>
+                <a href="/doctors" class="border-b border-slate-100 py-3 text-center font-bold text-slate-700 hover:text-indigo-700">DOCTORS</a>
+                <a href="/blog" class="py-3 text-center font-bold text-slate-700 hover:text-indigo-700">BLOG</a>
+                <a href="/contact" class="mt-2 w-full rounded-full bg-[#a3e635] px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-black block">Contact Us</a>
+            </nav>
         </div>
-        <!-- /wp:group -->
-
-        <!-- Mobile Navigation -->
-        <!-- wp:navigation {"overlayMenu":"mobile","className":"md:hidden"} /-->
 
     </div>
-    <!-- /wp:group -->
-
 </header>
-<!-- /wp:group -->
+<!-- /wp:html -->
