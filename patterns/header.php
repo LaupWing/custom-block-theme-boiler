@@ -21,11 +21,13 @@
         </a>
 <!-- /wp:html -->
 
-        <!-- Desktop Navigation Right with WordPress Navigation Block -->
+        <!-- Desktop Navigation Right -->
         <!-- wp:group {"className":"hidden md:flex items-center gap-8","layout":{"type":"flex"}} -->
         <div class="wp-block-group hidden md:flex items-center gap-8">
 
-            <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"left"},"fontSize":"small"} /-->
+            <!-- WordPress Navigation - Will show your menu items -->
+            <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"left"}} -->
+            <!-- /wp:navigation -->
 
             <!-- wp:html -->
             <a href="/contact" class="rounded-full bg-[#a3e635] px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-transform hover:scale-105">
@@ -36,8 +38,9 @@
         </div>
         <!-- /wp:group -->
 
-        <!-- Mobile Menu with WordPress Navigation Block -->
-        <!-- wp:navigation {"overlayMenu":"mobile","layout":{"type":"flex"},"className":"md:hidden"} /-->
+        <!-- Mobile Navigation -->
+        <!-- wp:navigation {"overlayMenu":"mobile","className":"md:hidden"} -->
+        <!-- /wp:navigation -->
 
 <!-- wp:html -->
     </div>
