@@ -46,9 +46,15 @@
             <!-- /wp:group -->
 
             <!-- CTA Button -->
-            <!-- wp:html -->
-            <a href="/contact" class="btn-cta">Contact Us</a>
-            <!-- /wp:html -->
+            <!-- wp:buttons -->
+            <div class="wp-block-buttons">
+                <!-- wp:button {"className":"btn-cta"} -->
+                <div class="wp-block-button btn-cta">
+                    <a class="wp-block-button__link wp-element-button" href="/contact">Contact Us</a>
+                </div>
+                <!-- /wp:button -->
+            </div>
+            <!-- /wp:buttons -->
 
         </div>
         <!-- /wp:group -->
