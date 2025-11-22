@@ -126,3 +126,18 @@
 .container {
   max-width: 1280px;
 }
+
+/* ==========================================================================
+   EDITOR OVERRIDES - Make text readable in Site Editor
+   ========================================================================== */
+
+/* Make white/light text black in editor for readability */
+.editor-styles-wrapper h1.text-white,
+.editor-styles-wrapper .text-white {
+  color: #000 !important;
+}
+
+.editor-styles-wrapper p.text-slate-200,
+.editor-styles-wrapper .text-slate-200 {
+  color: #333 !important;
+}
