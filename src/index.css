@@ -73,43 +73,23 @@
    HEADER COMPONENTS
    ========================================================================== */
 
-/* Floating Header Container */
-.header-floating {
-  @apply mx-auto flex max-w-7xl items-center justify-between rounded-full bg-white px-6 py-3 shadow-lg;
+/* WordPress Navigation Block Styling */
+.wp-block-navigation {
+  gap: 1.5rem !important;
 }
 
-/* Logo */
-.logo-icon {
-  @apply flex h-8 w-8 items-center justify-center rounded-full bg-indigo-600 text-white;
-}
-
-.logo-text {
-  @apply text-2xl font-black tracking-tighter text-indigo-700;
-}
-
-/* Navigation Links */
-.nav-link a {
+.wp-block-navigation-item a {
   @apply text-sm font-bold text-slate-600 transition-colors hover:text-indigo-700 no-underline;
+  text-transform: uppercase !important;
 }
 
-.mobile-nav-link a {
-  @apply text-slate-700 font-bold no-underline hover:text-indigo-700;
+/* Remove WordPress navigation default styles */
+.wp-block-navigation-item {
+  margin: 0 !important;
 }
 
-/* CTA Button - Reset WordPress defaults and apply custom styling */
-.wp-block-buttons .btn-cta {
-  @apply m-0;
-}
-
-.btn-cta .wp-block-button__link {
-  @apply inline-block rounded-full bg-[#a3e635] px-6 py-2.5 text-sm font-bold uppercase tracking-wide text-black transition-transform hover:scale-105 no-underline;
-  border: none !important;
-  padding: 0.625rem 1.5rem !important;
-}
-
-/* Mobile Menu Toggle */
-.mobile-menu-btn {
-  @apply flex cursor-pointer items-center rounded p-1 text-slate-900 hover:bg-slate-100;
+.wp-block-navigation .wp-block-navigation__submenu-container {
+  display: none;
 }
 
 /* Mobile Menu Links */
