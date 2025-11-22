@@ -37,8 +37,12 @@
 }
 
 /* Navigation Links */
-.nav-link {
-  @apply text-sm font-bold text-slate-600 transition-colors hover:text-indigo-700;
+.nav-link a {
+  @apply text-sm font-bold text-slate-600 transition-colors hover:text-indigo-700 no-underline;
+}
+
+.mobile-nav-link a {
+  @apply text-slate-700 font-bold no-underline hover:text-indigo-700;
 }
 
 /* CTA Button */
