@@ -3,6 +3,15 @@
  * Theme Functions
  */
 
+// Disable WordPress default block styles (use Tailwind instead)
+function customblocktheme_disable_wp_styles() {
+    wp_dequeue_style('wp-block-library');        // Core blocks
+    wp_dequeue_style('wp-block-library-theme');  // Theme blocks
+    wp_dequeue_style('global-styles');           // Global styles
+    wp_dequeue_style('classic-theme-styles');    // Classic theme styles
+}
+add_action('wp_enqueue_scripts', 'customblocktheme_disable_wp_styles', 100);
+
 // Enqueue Tailwind CSS for Frontend
 function customblocktheme_enqueue_styles() {
     $css_file = get_theme_file_path('build/index.css');

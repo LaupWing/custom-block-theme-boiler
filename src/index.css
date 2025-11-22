@@ -19,6 +19,57 @@
 }
 
 /* ==========================================================================
+   WORDPRESS BLOCK RESETS - Remove default WordPress styling
+   ========================================================================== */
+
+/* Reset all WordPress block containers */
+.wp-block-group,
+.wp-block-cover,
+.wp-block-buttons,
+.wp-block-button,
+.wp-block-columns,
+.wp-block-column,
+.wp-site-blocks {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Reset WordPress cover block */
+.wp-block-cover__inner-container {
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+/* Reset WordPress button defaults */
+.wp-block-button__link {
+  background: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  color: inherit !important;
+}
+
+/* Reset WordPress paragraph margins */
+.wp-block-post-content p,
+.wp-block-group p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* Reset layout classes that WordPress adds */
+.is-layout-flex,
+.is-layout-flow,
+.is-layout-constrained {
+  gap: 0 !important;
+}
+
+/* Remove WordPress container padding */
+.wp-container-core-group-is-layout-1,
+[class*="wp-container-"] {
+  padding: 0 !important;
+}
+
+/* ==========================================================================
    HEADER COMPONENTS
    ========================================================================== */
 
