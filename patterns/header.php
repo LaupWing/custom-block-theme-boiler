@@ -22,8 +22,8 @@
             <!-- wp:buttons -->
             <div class="wp-block-buttons">
                 <!-- wp:button {"backgroundColor":"primary","textColor":"base","className":"rounded-full"} -->
-                <div class="wp-block-button">
-                    <a class="wp-block-button__link has-base-color has-primary-background-color rounded-full wp-element-button" href="/contact">Get Started</a>
+                <div class="wp-block-button rounded-full">
+                    <a class="wp-block-button__link has-base-color has-primary-background-color wp-element-button" href="/contact">Get Started</a>
                 </div>
                 <!-- /wp:button -->
             </div>

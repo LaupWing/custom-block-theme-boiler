@@ -39,3 +39,8 @@
 .section-padding-sm {
   @apply py-8 md:py-12;
 }
+
+/* WordPress Button Block Customizations */
+.wp-block-button.rounded-full .wp-block-button__link {
+  @apply rounded-full;
+}
